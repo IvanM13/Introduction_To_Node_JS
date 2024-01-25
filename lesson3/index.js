@@ -1,8 +1,8 @@
 const fs = require('fs');
 const os = require('os');
 const cpu = os.cpus();
-const obj = JSON.stringify(cpu);
-fs.writeFile('cpu.txt', obj, 'utf8', (err) =>{
+const obj = JSON.stringify(cpu, ["model"], 2);
+fs.writeFile('cpu.json', obj, 'utf8', (err) =>{
     if(err){
         console.error(err);
     }
@@ -11,7 +11,7 @@ fs.writeFile('cpu.txt', obj, 'utf8', (err) =>{
 console.log(obj);
 
 
-fs.readFile("cpu.txt", function(error,data){
+fs.readFile("cpu.json", function(error,data){
     if(error) {  // если возникла ошибка
         return console.log(error);
     }
