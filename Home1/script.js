@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {
             'Content-type': 'text/html; charset=UTF-8',
         });
-        res.end(`<h1>Добро пожаловать на мой сайт!!</h1><br><h3> ${msgModule(counterMain)} </h3><br>
+        res.end(`<h1>Добро пожаловать на мой сайт!</h1><br><h3> ${msgModule(counterMain)} </h3><br>
             <a href="http://localhost:3000/about">Go to about</a>`);
     } else if (req.url === '/about') {
         counterAbout++;
