@@ -35,11 +35,11 @@ function readCounter(req, res, next) {
 }
 
 app.get('/', updateCounter, readCounter, (req, res) => {
-  res.send(`<h1>Welcome to home<h1/><br> <p>counter: ${req.counter}<p/><br><a href="/about">/about</a>`);
+  res.send(`<h1>Welcome to home</h1><p>counter: ${req.counter}<p/><a href="/about">/about</a>`);
 });
 
 app.get('/about', updateCounter, readCounter, (req, res) => {
-  res.send(`<h1>About<h1/><br> <p>counter: ${req.counter}<p/><br><a href="/">/main</a>`);
+  res.send(`<h1>About</h1><p>counter: ${req.counter}</p><<a href="/">/main</a>`);
 });
 
 app.listen(port, () => {
