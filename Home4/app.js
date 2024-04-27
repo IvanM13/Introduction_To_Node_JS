@@ -82,7 +82,6 @@ app.put('/users/:id', (req, res) =>{
     if (result.error) {
         return res.status(404).send({error: result.error.details});
     }
-    console.log(req);
     const users = JSON.parse(fs.readFileSync(pathDB));
     const user = users.find(user => user.id === Number(req.params.id));
 
