@@ -10,6 +10,7 @@ const articles = [
     { title: 'Article 1', description: 'First awesome article' },
     { title: 'Article 2', description: 'Second awesome article' },
     { title: 'Article 3', description: 'Thrird awesome article' },
+    { title: 'Article 5', description: 'Thrird awesome article' },
 ];
 
 app.get('/', (req, res) => {
